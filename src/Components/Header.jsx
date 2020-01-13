@@ -1,10 +1,14 @@
-import React from 'react';
+import React from "react";
+import { Link } from "@reach/router";
 
-const Header = () => {
+const Header = props => {
   return (
-   <header>
-     <h1>NewsFeed NC</h1>
-   </header>
+    <header>
+      <Link to={'/'}>
+        <h1>NewsFeed NC</h1>
+      </Link>
+      <p id="user">welcome {props.username}</p>
+    </header>
   );
 };
 

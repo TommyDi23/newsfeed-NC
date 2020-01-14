@@ -48,10 +48,12 @@ class ArticlesList extends Component {
 
   render() {
     const { articles, isLoading, err } = this.state;
+    const { topic } = this.props;
     if (isLoading) return <Loading />;
-    if (err) return <ErrorDisplay err={err}/>
+    if (err) return <ErrorDisplay err={err} />;
     return (
       <main>
+        <h5>{topic} articles</h5>
         <ArticleSorter articlesSortBy={this.articlesSortBy} />
         <ul>
           {articles.map(article => {

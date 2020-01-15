@@ -6,19 +6,25 @@ import NavBar from "./Components/NavBar";
 import ArticlesList from "./Components/ArticlesList";
 import SingleArticle from "./Components/SingleArticle";
 import ErrorDisplay from "./Components/ErrorDisplay";
+//import { getUser } from "./api";
 
 class App extends Component {
   state = {
     username: "jessjelly"
   };
 
+  selectUser = event => {
+    this.setState({ username: event.target.value });
+  };
+
   render() {
     const { username } = this.state;
+
     return (
       <div className="App">
-        <Header username={username} />
+        <Header username={username} selectUser={this.selectUser} />
         <NavBar />
-        <Router>
+        <Router primary={false} className="main">
           <ArticlesList path="/topics/:topic/articles" username={username} />
           <ArticlesList path="/" username={username} />
           <SingleArticle path="/articles/:article_id" username={username} />

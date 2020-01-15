@@ -44,20 +44,30 @@ export const deleteCommentByCommentId = comment_id => {
   return axios.delete(`${baseURL}/comments/${comment_id}`);
 };
 
-export const updateArticleVote = (inc_votes, article_id) => {
-  return axios
-    .patch(`${baseURL}/articles/${article_id}`, { inc_votes: inc_votes })
-    .then(({ data }) => {
-      return data.comment;
-    });
-};
+// export const updateArticleVote = (inc_votes, article_id) => {
+//   return axios
+//     .patch(`${baseURL}/articles/${article_id}`, { inc_votes: inc_votes })
+//     .then(({ data }) => {
+//       return data.article;
+//     });
+// };
 
-export const updateCommentVote = (comment_id, inc_votes) => {
-  return axios
-    .patch(`${baseURL}/comments/${comment_id}`, { inc_votes: inc_votes })
-    .then(({ data }) => {
-      return data.comment;
-    });
-};
+// export const updateCommentVote = (comment_id, inc_votes) => {
+//   return axios
+//     .patch(`${baseURL}/comments/${comment_id}`, { inc_votes: inc_votes })
+//     .then(({ data }) => {
+//       return data.comment;
+//     });
+// };
 
-export const getUser = () => {};
+export const changeVotes = (path, id, inc_votes)=>{
+  return axios.patch(`${baseURL}/${path}/${id}`, {inc_votes :inc_votes}).then(({data})=>{
+    return data.votes
+  })
+}
+
+export const getUser = username => {
+  return axios.get(`${baseURL}/users/${username}`).then(({ data }) => {
+    return data.user;
+  });
+};

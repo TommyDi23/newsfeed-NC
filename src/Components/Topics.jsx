@@ -4,7 +4,7 @@ const Topics = props => {
   
   return (
     <div>
-      <li>
+      <li className='topic'>
         <Link to={`/topics/${props.topic.slug}/articles`}>
         <h2> {props.topic.slug}</h2>
         </Link>

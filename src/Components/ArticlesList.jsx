@@ -52,7 +52,7 @@ class ArticlesList extends Component {
     if (isLoading) return <Loading />;
     if (err) return <ErrorDisplay err={err} />;
     return (
-      <main>
+      <main >
         <h5>{topic} articles</h5>
         <ArticleSorter articlesSortBy={this.articlesSortBy} />
         <ul>

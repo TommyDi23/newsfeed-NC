@@ -5,7 +5,7 @@ const ArticleCard = props => {
   const {article} = props
   return (
     <div>
-      <li>
+      <li className='articlelist'>
         <Link to={`/articles/${article.article_id}`}>
         <h3>{article.title}</h3>
         </Link>

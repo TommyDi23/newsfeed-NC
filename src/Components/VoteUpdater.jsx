@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { updateArticleVote, updateCommentVote } from "../api";
+import {  changeVotes } from "../api";
 import ErrorDisplay from "./ErrorDisplay";
 
 class VoteUpdater extends Component {
@@ -10,38 +10,45 @@ class VoteUpdater extends Component {
   };
 
   handleVote = inc_votes => {
-    const { comment_id, article_id } = this.props;
+    const { id, path } = this.props;
     this.setState(currentState => {
       return { voteDifference: currentState.voteDifference + inc_votes };
     });
-    updateArticleVote(inc_votes, article_id).catch(({ response }) =>
-      this.setState({
-        err: { status: response.status, msg: response.data.msg },
-        isLoading: false
+
+    changeVotes(path, id, inc_votes).catch(({ response }) =>
+      this.setState(currentState => {
+        return {
+          err: { status: response.status, msg: response.data.msg },
+          isLoading: false,
+          voteDifference: currentState.voteDifference - inc_votes
+        };
       })
     );
-    updateCommentVote(comment_id, inc_votes).catch(({ response }) =>
-      this.setState({
-        err: { status: response.status, msg: response.data.msg },
-        isLoading: false
-      })
-    );
+
+
   };
 
   render() {
     const { voteDifference, err } = this.state;
-    // if (err) return <ErrorDisplay err={err} />;
+    const { votes } = this.props;
     return (
       <div>
-        {this.props.article_id && (
-          <p>Votes / {this.props.articleVotes + voteDifference}</p>
-        )}
-        {this.props.comment_id && (
-          <p>Votes / {this.props.commentVotes + voteDifference}</p>
-        )}
-        
-        <button disabled={voteDifference === 1} onClick={() => this.handleVote(+1)}>Upvote</button>
-        <button disabled={voteDifference === -1} onClick={() => this.handleVote(-1)}>Downvote</button>
+        <p>Votes / {votes + voteDifference}</p>
+
+        <p>{err && <ErrorDisplay err={err} />}</p>
+
+        <button
+          disabled={voteDifference === 1}
+          onClick={() => this.handleVote(+1)}
+        >
+          Upvote
+        </button>
+        <button
+          disabled={voteDifference === -1}
+          onClick={() => this.handleVote(-1)}
+        >
+          Downvote
+        </button>
       </div>
     );
   }

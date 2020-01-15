@@ -20,7 +20,7 @@ class NavBar extends Component {
 
     return (
       <nav>
-        <ul>
+        <ul className='ulTopic'>
           {topics.map(topic => {
             return <Topics key={topic.slug} topic={topic}/>;
           })}

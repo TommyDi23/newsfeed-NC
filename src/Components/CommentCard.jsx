@@ -7,16 +7,16 @@ const CommentCard = props => {
   return (
     <>
       <li>
-        <h5>
+        <h6>
           {comment.author} / {comment.created_at}
-        </h5>
+        </h6>
         <p>{comment.body}</p>
         {comment.author === username && (
           <button onClick={() => handleDelete(comment.comment_id)}>
             delete
           </button>
         )}
-        <VoteUpdater comment_id={comment.comment_id} commentVotes={comment.votes} />
+        <VoteUpdater id={comment.comment_id} votes={comment.votes} path='comments' />
       </li>
     </>
   );

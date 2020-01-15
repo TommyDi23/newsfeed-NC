@@ -44,16 +44,16 @@ class SingleArticle extends Component {
     if (isLoading) return <Loading />;
     if (err) return <ErrorDisplay err={err} />;
     return (
-      <article>
+      <main>
         <h2>{title}</h2>
         <p>{body}</p>
         <p>
           Written by/ {author} on {created_at} / {comment_count} comments/{" "}
           {topic}{" "}
         </p>
-        <VoteUpdater article_id={article_id} articleVotes={votes} />
+        <VoteUpdater id={article_id} votes={votes} path='articles' />
         <ArticleComments article_id={article_id} username={username} />
-      </article>
+      </main>
     );
   }
 }

@@ -54,7 +54,7 @@ class ArticlesList extends Component {
     return (
       <main >
         <h5>{topic} articles</h5>
-        <ArticleSorter articlesSortBy={this.articlesSortBy} />
+        <ArticleSorter className="sorter" articlesSortBy={this.articlesSortBy} />
         <ul>
           {articles.map(article => {
             return <ArticleCard key={article.article_id} article={article} />;

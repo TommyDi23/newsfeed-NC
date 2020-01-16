@@ -6,6 +6,8 @@ import NavBar from "./Components/NavBar";
 import ArticlesList from "./Components/ArticlesList";
 import SingleArticle from "./Components/SingleArticle";
 import ErrorDisplay from "./Components/ErrorDisplay";
+import SideBarTwo from "./Components/SideBarTwo";
+
 //import { getUser } from "./api";
 
 class App extends Component {
@@ -24,6 +26,7 @@ class App extends Component {
       <div className="App">
         <Header username={username} selectUser={this.selectUser} />
         <NavBar />
+        <SideBarTwo />
         <Router primary={false} className="main">
           <ArticlesList path="/topics/:topic/articles" username={username} />
           <ArticlesList path="/" username={username} />

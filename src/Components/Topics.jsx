@@ -8,7 +8,7 @@ const Topics = props => {
         <Link to={`/topics/${props.topic.slug}/articles`}>
         <h2> {props.topic.slug}</h2>
         </Link>
-        <p>{props.topic.description}</p>
+        <p className='topicDescription'>{props.topic.description}</p>
       </li>
     </div>
   );

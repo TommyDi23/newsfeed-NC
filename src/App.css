@@ -10,17 +10,28 @@
 
 header {
   grid-area: header;
-  text-align: center;
+  font-family: monospace;
+  text-align: left;
   position: fixed;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.048);
   width: 100%;
   height: 190px;
   position: fixed;
-  background: #333;
+  background: rgb(156, 77, 77);
   color: #fff;
+  border: 10px solid rgb(0, 0, 0);
+}
+
+.title {
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: -70px;
 }
 
 nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
   grid-area: sidebar;
   background-image: linear-gradient(
     rgba(183, 211, 183, 0.561),
@@ -30,13 +41,15 @@ nav {
   position: fixed;
   height: 100%;
   width: 180px;
+  margin-top: 200px;
 }
 
 .main {
   grid-area: main;
+  text-align: center;
   background-image: linear-gradient(
-    rgb(199, 240, 104),
-    rgba(10, 46, 10, 0.561)
+    rgba(167, 86, 86, 0.836),
+    rgba(186, 207, 186, 0.561)
   );
   border: 10px solid rgb(0, 0, 0);
 }
@@ -46,109 +59,59 @@ li {
 }
 
 .topic {
-  padding-top: 110px;
-}
-
-/* h5 {
-  word-spacing: 25px;
-  font-size: 75px;
-  text-align: center;
-  color: rgb(0, 0, 0);
-   border: 2px solid black;
-  padding: 10px;
- padding-top: 20px;
-  background-repeat: no-repeat;
-  background-size:  cover;
-  background-image: url('http://news.bbcimg.co.uk/news/special/2015/newsspec_10077/content/english/img/1024/future_of_news.jpg');
-  opacity: 0.9;
-  height: 220px;
-  width: 720px;
-  margin-top: 0px;
-    
-} */
-
-/* .App {
-  display: grid;
-  grid-template-columns: 120px auto 120px;
-  grid-template-rows: 190px 110px auto;
-  grid-template-areas:
-    "header"
-    "navbar"
-    "main";
-  text-align: center;
-}
-.ulTopic {
-  grid-area: navbar;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
   font-family: monospace;
-}
-
-.ulTopic:link,
-.ulTopic:visited {
-  background-color: #f44336;
-  color: white;
-  padding: 14px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.topic {
-  list-style: none;
-  padding-right: 23em;
-  margin: 1em 0;
-}
-
-header {
- 
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  font-size: 20px;
-  background-image: linear-gradient(rgb(24, 23, 23), rgba(10, 46, 10, 0.561));
-  grid-area: header;
-  text-align: center;
-  color: rgb(0, 0, 0);
-  text-decoration: none;
-}
-
-body {
-  border: 1px solid rgb(173, 138, 57);
-  border-style: solid;
-}
-
-.userdropdown {
-  width: 12%;
-  display: inline-block;
-  margin-right: 1700px;
-  text-align: center;
-}
-
-nav {
-  background-image: linear-gradient(rgb(10, 46, 10, 0.561), rgba(24, 23, 23));
-  grid-area: navbar;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
-.main {
-  grid-area: main;
-  background-image: linear-gradient(rgb(47, 46, 46), rgba(10, 46, 10, 0.561));
-  border: 10px solid rgb(0, 0, 0);
+h1 {
+  font-size: 50px;
+  font-family: monospace;
+  margin-left: 60px;
+  margin-top: 12px;
+}
+
+h4 {
+  text-transform: capitalize;
+  font-size: 25px;
+  color: white;
+}
+
+h5 {
+  text-transform: capitalize;
+  font-family: monospace;
+  word-spacing: 35px;
+  font-size: 75px;
+  color: aquamarine;
+  text-align: middle;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("http://news.bbcimg.co.uk/news/special/2015/newsspec_10077/content/english/img/1024/future_of_news.jpg");
+  height: 200px;
+  margin-top: 0px;
+  margin: 0%;
+}
+
+h3 {
+  font-family: monospace;
+  font-size: 25px;
 }
 
 .articlelist {
+  text-transform: capitalize;
   margin-left: 80px;
   margin-right: 80px;
   text-decoration: none;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: azure;
-  border: 1px solid rgb(46, 114, 105);
+  color: rgb(202, 20, 75);
+  border: 1px solid rgb(255, 255, 255);
   border-style: solid;
-  border-width: 2px 20px 4px 10px;
+  border-width: 2px 10px 4px 2px;
   padding: 10px;
   border-radius: 50px 25px;
-  box-shadow: 5px 10px rgb(25, 65, 34);
+  box-shadow: 5px 7px rgb(138, 251, 166);
 }
 
 .articlelist:hover {
@@ -159,62 +122,213 @@ nav {
   color: rgb(7, 2, 2);
 }
 
+.orderarticles {
+  text-transform: capitalize;
+  font-size: 19px;
+  font-family: monospace;
+  color: #fff;
+  font-weight: bold;
+}
+
 select {
-  font-size: 10px;
+  font-size: 20px;
   font-weight: 700;
   padding: 0.6em 1.4em 0.5em 0.8em;
   box-sizing: border-box;
-  background-color: rgb(236, 223, 223);
-  border: 5px solid #aaa;
-  color: rgb(0, 1, 2);
-  text-align: right;
-}
-#user {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  text-align: left;
-  color: rgb(32, 41, 7);
+  background-color: rgb(2, 2, 2);
+  border: 5px solid rgb(156, 77, 77);
+  color: rgb(255, 255, 255);
+  margin: 0.1%;
 }
 
-h5 {
-  word-spacing: 25px;
-  font-size: 75px;
-  text-align: center;
-  color: rgb(0, 0, 0);
-   border: 2px solid black;
-  padding: 25px;
- padding-top: 265px;
-  background-repeat: no-repeat;
-  background-size:  cover;
-  background-image: url('http://news.bbcimg.co.uk/news/special/2015/newsspec_10077/content/english/img/1024/future_of_news.jpg');
-  opacity: 0.9;
-  height: 220px;
-  width: 1320px;
-  margin-top: 0px;
-    
+.articleBody {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
 }
 
-li {
-  list-style: none;
-} */
+textarea {
+  border: 1px solid rgb(0, 0, 0);
+}
 
-@media only screen and (max-width: 572px) {
+.sidebartwo {
+  grid-area: sidebartwo;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-image: linear-gradient(
+    rgba(73, 224, 73, 0.561),
+    rgb(238, 236, 123)
+  );
+  font-size: 30px;
+  font-family: monospace;
+  color: #fff;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 680px) {
   .App {
-    background-color: blueviolet;
-    grid-template-columns: 1fr;
-    grid-auto-rows: 2fr 1fr 7fr;
+    text-align: center;
+    background-color: rgb(43, 49, 226);
+    grid-template-columns: 100%;
+    grid-auto-rows: 150px 100px 150px 100px;
     grid-template-areas:
       "header"
-      "navbar"
-      "main";
+      "sidebar"
+      "main"
+      "sidebartwo";
   }
 
+  #user {
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    text-align: center;
+    color: rgb(14, 14, 13);
+    padding-bottom: 10%;
+  }
+
+  header {
+    color: black;
+    text-align: left;
+    margin-bottom: px;
+    position: inherit;
+  }
+
+  .title {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: -170px;
+  }
+
+  .userdropdown {
+    font-size: 12px;
+    padding: 0.6em 1.4em 0.5em 0.8em;
+    box-sizing: border-box;
+    background-color: rgb(2, 2, 2);
+    border: 5px solid rgb(156, 77, 77);
+    color: rgb(255, 255, 255);
+    margin: 3%;
+  }
+
+  nav {
+    grid-area: sidebar;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.561), rgb(0, 0, 0));
+    height: 100px;
+    width: 100%;
+    margin-top: 0px;
+    position: inherit;
+  }
+
+  .topic {
+    text-align: center;
+    margin: 3%;
+    display: block;
+  }
+
+  .topicDescription {
+    display: none;
+  }
   ul {
-    background-color: rgb(105, 76, 76);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  li {
+    float: left;
+  }
+
+  li {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+  }
+
+  .main {
+    grid-area: main;
+    text-align: center;
+    background-image: linear-gradient(
+      rgba(167, 86, 86, 0.836),
+      rgba(186, 207, 186, 0.561)
+    );
+    border: 10px solid rgb(0, 0, 0);
+    width: 100%;
+  }
+
+  h5 {
+    text-transform: capitalize;
+    font-family: monospace;
+    font-size: 25px;
+    color: aquamarine;
+    text-align: middle;
+    text-align: center;
+    height: 10px;
+    margin: 5%;
+    background-image: none;
+  }
+
+  h5 {
+    text-transform: capitalize;
+    font-family: monospace;
+    word-spacing: 35px;
+    font-size: 35px;
+    color: aquamarine;
+    text-align: center;
+    background-image: none;
+    height: 60px;
+    margin-top: 50px;
+    margin: 0%;
+  }
+
+  .orderarticles {
+    text-transform: capitalize;
+    font-size: 19px;
+    font-family: monospace;
+    color: #fff;
+    font-weight: bold;
+    margin: 0%;
+  }
+
+  select {
+    font-size: 15px;
+    font-weight: 700;
+    box-sizing: border-box;
+    background-color: rgb(2, 2, 2);
+    border: 1px solid rgb(156, 77, 77);
+    color: rgb(255, 255, 255);
+    margin: 0.9%;
+  }
+
+  .articlelist {
+    text-transform: capitalize;
+    margin-top: 8%;
+    margin-left: 80px;
+    margin-right: 80px;
+    text-decoration: none;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(202, 20, 75);
+    border: 1px solid rgb(255, 255, 255);
+    border-style: solid;
+    border-width: 2px 10px 4px 2px;
+    padding: 10px;
+    border-radius: 70px 25px;
+    box-shadow: 5px 7px rgb(138, 251, 166);
+  }
+
+  .sidebartwo {
+    grid-area: sidebartwo;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-  }
-  header {
-    text-align: left;
+    justify-content: space-evenly;
+    background-image: linear-gradient(
+      rgba(73, 224, 73, 0.561),
+      rgb(238, 236, 123)
+    );
+    font-size: 20px;
+    font-family: monospace;
+    color: #fff;
+    font-weight: bold;
+    height: 150px;
   }
 }

@@ -32,7 +32,7 @@ class ArticlesList extends Component {
     const { sort_by, order } = this.state;
     getArticles(sort_by, order, topic)
       .then(articles => {
-        this.setState({ articles: articles, isLoading: false });
+        this.setState({ articles: articles, isLoading: false, err: null });
       })
       .catch(({ response }) =>
         this.setState({

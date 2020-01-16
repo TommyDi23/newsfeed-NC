@@ -1,5 +1,75 @@
 .App {
   display: grid;
+  grid-template-columns: 190px auto 190px;
+  grid-template-rows: 190px 110px auto;
+  grid-template-areas:
+    "header header header"
+    "sidebar main sidebartwo"
+    "sidebar main sidebartwo";
+}
+
+header {
+  grid-area: header;
+  text-align: center;
+  position: fixed;
+  background-color: black;
+  width: 100%;
+  height: 190px;
+  position: fixed;
+  background: #333;
+  color: #fff;
+}
+
+nav {
+  grid-area: sidebar;
+  background-image: linear-gradient(
+    rgba(183, 211, 183, 0.561),
+    rgb(238, 123, 123)
+  );
+  border: 10px solid rgb(0, 0, 0);
+  position: fixed;
+  height: 100%;
+  width: 180px;
+}
+
+.main {
+  grid-area: main;
+  background-image: linear-gradient(
+    rgb(199, 240, 104),
+    rgba(10, 46, 10, 0.561)
+  );
+  border: 10px solid rgb(0, 0, 0);
+}
+
+li {
+  list-style: none;
+}
+
+.topic {
+  padding-top: 110px;
+}
+
+/* h5 {
+  word-spacing: 25px;
+  font-size: 75px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+   border: 2px solid black;
+  padding: 10px;
+ padding-top: 20px;
+  background-repeat: no-repeat;
+  background-size:  cover;
+  background-image: url('http://news.bbcimg.co.uk/news/special/2015/newsspec_10077/content/english/img/1024/future_of_news.jpg');
+  opacity: 0.9;
+  height: 220px;
+  width: 720px;
+  margin-top: 0px;
+    
+} */
+
+/* .App {
+  display: grid;
+  grid-template-columns: 120px auto 120px;
   grid-template-rows: 190px 110px auto;
   grid-template-areas:
     "header"
@@ -35,8 +105,6 @@ header {
  
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 20px;
-  
-  
   background-image: linear-gradient(rgb(24, 23, 23), rgba(10, 46, 10, 0.561));
   grid-area: header;
   text-align: center;
@@ -127,7 +195,7 @@ h5 {
 
 li {
   list-style: none;
-}
+} */
 
 @media only screen and (max-width: 572px) {
   .App {

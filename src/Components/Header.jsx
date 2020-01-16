@@ -8,7 +8,7 @@ const Header = props => {
       <Link to={"/"}>
         <h1>NewsFeed NC</h1>
       </Link>
-      <p id="user">[welcome {props.username}]</p>
+      <p id="user">~welcome {props.username}~</p>
       <UserLogin selectUser={props.selectUser} />
     </header>
   );

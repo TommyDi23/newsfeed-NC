@@ -4,7 +4,7 @@ const ArticleSorter = props => {
   return (
     <>
       <p className='orderarticles'>order of articles:</p>
-      <select onChange={e => props.articlesSortBy(e.target.value, "sort_by")}>
+      <select className="sorter" onChange={e => props.articlesSortBy(e.target.value, "sort_by")}>
         <option value="created_at">Date created</option>
         <option value="comment_count">Comments</option>
         <option value="votes">Votes</option>

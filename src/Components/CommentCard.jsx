@@ -6,11 +6,11 @@ const CommentCard = props => {
   
   return (
     <>
-      <li>
+      <li className='commentList'>
         <h6>
           {comment.author} / {comment.created_at}
         </h6>
-        <p>{comment.body}</p>
+        <p className='comment'>{comment.body}</p>
         {comment.author === username && (
           <button className='deleteBut' onClick={() => handleDelete(comment.comment_id)}>
             <span role='img' aria-label='postIt' >🗑</span>

@@ -25,17 +25,15 @@ class CommentAdder extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form className='textareacont'onSubmit={this.handleSubmit}>
         <textarea
           placeholder="have your say..."
           required
           onChange={this.handleChange}
           value={this.state.body}
           type="text"
-          rows="5"
-          cols="100"
         ></textarea>
-        <button className='postButton'><span role='img' aria-label='postIt' >📨</span></button>
+        <button className='postButton'><span role='img' aria-label='postIt' >📮</span></button>
       </form>
     );
   }

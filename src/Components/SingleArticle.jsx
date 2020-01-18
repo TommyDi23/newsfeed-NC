@@ -45,7 +45,7 @@ class SingleArticle extends Component {
     if (err) return <ErrorDisplay err={err} />;
     return (
       <main>
-        <h4>{title}</h4>
+        <h4 className='articleTitle'>{title}</h4>
         <p className='articleBody'>{body}</p>
         <p>
           Written by/ {author} on {created_at} / {comment_count} comments/{" "}

@@ -25,7 +25,6 @@ class App extends Component {
       <div className="App">
         <Header username={username} selectUser={this.selectUser} />
         <NavBar />
-     
         <Router primary={false} className="main">
           <ArticlesList path="/topics/:topic/articles" username={username} />
           <ArticlesList path="/" username={username} />

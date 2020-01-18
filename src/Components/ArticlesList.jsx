@@ -53,7 +53,7 @@ class ArticlesList extends Component {
     if (err) return <ErrorDisplay err={err} />;
     return (
       <main >
-        <h5>{topic} articles</h5>
+        <h5>{topic}/articles</h5>
         <ArticleSorter className="sorter" articlesSortBy={this.articlesSortBy} />
         <ul>
           {articles.map(article => {

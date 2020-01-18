@@ -11,10 +11,10 @@ const ArticleSorter = props => {
       </select>
       <form onClick={e => props.articlesSortBy(e.target.value, "order")}>
         <label>
-          <input type="radio" name="order" value="desc" className='desc' /> descending
+          <input type="radio" name="order" value="desc" id='dc' /> descending
         </label>
         <label>
-          <input type="radio" name="order" value="asc" /> ascending
+          <input type="radio" name="order" value="asc" id='ac'/> ascending
         </label>
       </form>
     </>

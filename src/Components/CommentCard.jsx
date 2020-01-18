@@ -12,8 +12,8 @@ const CommentCard = props => {
         </h6>
         <p>{comment.body}</p>
         {comment.author === username && (
-          <button onClick={() => handleDelete(comment.comment_id)}>
-            delete
+          <button className='deleteBut' onClick={() => handleDelete(comment.comment_id)}>
+            <span role='img' aria-label='postIt' >🗑</span>
           </button>
         )}
         <VoteUpdater id={comment.comment_id} votes={comment.votes} path='comments' />

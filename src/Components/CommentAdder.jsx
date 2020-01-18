@@ -35,7 +35,7 @@ class CommentAdder extends Component {
           rows="5"
           cols="100"
         ></textarea>
-        <button>post</button>
+        <button className='postButton'><span role='img' aria-label='postIt' >📨</span></button>
       </form>
     );
   }

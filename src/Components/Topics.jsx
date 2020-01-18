@@ -6,7 +6,7 @@ const Topics = props => {
     <div>
       <li className='topic'>
         <Link to={`/topics/${props.topic.slug}/articles`}>
-        <h2> {props.topic.slug}</h2>
+        <h2>/ {props.topic.slug} </h2>
         </Link>
         <p className='topicDescription'>{props.topic.description}</p>
       </li>

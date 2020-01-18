@@ -37,17 +37,17 @@ class VoteUpdater extends Component {
 
         <p>{err && <ErrorDisplay err={err} />}</p>
 
-        <button
+        <button className="upvote"
           disabled={voteDifference === 1}
           onClick={() => this.handleVote(+1)}
         >
-          Upvote
+          <span role='img' aria-label='postIt' >⬆</span>
         </button>
-        <button
+        <button className="downvote"
           disabled={voteDifference === -1}
           onClick={() => this.handleVote(-1)}
         >
-          Downvote
+          <span role='img' aria-label='postIt' >⬇</span>
         </button>
       </div>
     );

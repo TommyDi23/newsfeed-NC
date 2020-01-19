@@ -35,7 +35,7 @@ NC news is a modern news website which enables visitors to read, comment and vot
 
 5. To exit app 
 
-`<kbd>⌘</kbd> and <kbd>C</kbd>`
+<kbd>⌘</kbd> and <kbd>C</kbd>
 
 ### Developed By 
 

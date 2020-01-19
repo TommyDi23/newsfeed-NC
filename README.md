@@ -6,7 +6,7 @@ NC news is a modern news website which enables visitors to log in as user, read,
 ### Deployed and to view
 
 
-* To view live on netlify [Frontend](https://heroku-nc-news.herokuapp.com/api)
+* To view live on netlify [Frontend](https://td23-newsfeed-nc.netlify.com/)
 
 * To view the api [Backend](https://heroku-nc-news.herokuapp.com/api)
 
@@ -42,7 +42,7 @@ NC news is a modern news website which enables visitors to log in as user, read,
 
 5. To exit app 
 
-<kbd>^</kbd> and <kbd>C</kbd>
+<kbd>ctrl</kbd> and <kbd>C</kbd>
 
 ### Developed By 
 

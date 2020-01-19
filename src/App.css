@@ -42,9 +42,10 @@ header {
   margin-top: 1%;
   font-weight: 250;
   box-sizing: border-box;
-  background-color: rgb(2, 2, 2);
+  background-color: rgb(0, 3, 97);
   border: 2px solid rgb(241, 241, 241);
   color: rgb(255, 255, 255);
+  font-family: monospace;
   
 }
 
@@ -74,8 +75,8 @@ nav {
   grid-area: main;
   text-align: center;
   background-image: linear-gradient(
-    rgba(249, 2, 2, 0.235),
-    rgba(254, 254, 254, 0.836)
+    rgba(165, 122, 122, 0.235),
+    rgba(217, 242, 176, 0.836)
   );
 }
 
@@ -166,8 +167,9 @@ h4 {
 .sorter {
   font-size: 15px;
   font-weight: 250;
+  font-family: monospace;
   box-sizing: border-box;
-  background-color: rgb(2, 2, 2);
+  background-color: rgb(4, 4, 138);
   border: 2px solid rgb(241, 241, 241);
   color: rgb(255, 255, 255);
   margin: 0.4%;
@@ -311,8 +313,8 @@ a:active {
     border-radius: 15px;
   }
   .upvote:hover {
-    background-color: rgb(255, 0, 0);
-    color:rgb(0, 0, 0);
+    background-color:rgb(0, 255, 0);
+    color:brown
   }
 
   .downvote {
@@ -330,8 +332,8 @@ a:active {
   }
 
   .downvote:hover {
-    background-color: rgb(255, 0, 0);
-    color:rgb(0, 0, 0);
+      background-color:rgb(0, 255, 0);
+    color:brown
   }
 
 /* *\*---------------------------------*\\ */
@@ -416,8 +418,8 @@ a:active {
     grid-area: main;
     text-align: center;
     background-image: linear-gradient(
-    rgb(228, 164, 164),
-    rgba(254, 254, 254, 0.836)
+    rgba(250, 245, 245, 0.783),
+    rgba(180, 235, 153, 0.836)
   );
   }
 
@@ -443,7 +445,7 @@ a:active {
     font-size: 10px;
     font-weight: 250;
     box-sizing: border-box;
-    background-color: rgb(2, 2, 2);
+    background-color: rgb(0, 3, 97);
     border: 2px solid rgb(241, 241, 241);
     color: rgb(255, 255, 255);
     margin: 0.1%;
@@ -518,4 +520,25 @@ rgba(193, 193, 249, 0.612)  );
 }
 
 
+}
+
+
+@media screen and (max-width: 1315px) and  (min-width : 1000px){
+  .userdropdown{
+  margin-left: 2%;
+  margin-top: 4%;
+  font-weight: 250;
+  box-sizing: border-box;
+  background-color: rgb(0, 27, 177);
+  border: 2px solid rgb(241, 241, 241);
+  color: rgb(255, 255, 255);
+  
+}
+
+.user{
+  text-align: center;
+  color: rgb(255, 255, 255);
+  margin-top: 1%;
+  margin-left: 2%;
+}
 }

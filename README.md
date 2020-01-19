@@ -14,9 +14,34 @@ NC news is a modern news website which enables visitors to read, comment and vot
 
 ### Cloning and Installation
 
+1. Clone this repository and paste the url into your terminal
+
+`git clone https://github.com/TommyDi23/newsfeed-nc.git`
 
 
-### `npm run build`
+2. Change directory into the respository you have just cloned and open it into your code editor
+
+`cd newsfeed-nc`
+
+`code .`
+
+3. Install dependencies needed to run the app
+
+`npm install`
+
+4. To run Reactjs open your terminal and run the script
+
+`npm start`
+
+5. To exit app 
+
+`<kbd>⌘</kbd> and <kbd>C</kbd>`
+
+### Developed By 
+
+Tommy Diep 
+Github: Tommydi23
+
 
 Builds the app for production to the `build` folder.<br />
 It correctly bundles React in production mode and optimizes the build for the best performance.

@@ -3,7 +3,7 @@ import React from 'react';
 const Loading = () => {
   return (
     
-      <p>...Loading...please wait...</p>
+    <h5>Loading,please wait...<span role='img' aria-label='loading' >🦥</span></h5>
    
   );
 };

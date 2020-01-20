@@ -9,7 +9,8 @@ class ArticleComments extends Component {
   state = {
     comments: [],
     isLoading: true,
-    err: null
+    err: null,
+    showComments: false
   };
 
   componentDidMount() {
@@ -46,8 +47,14 @@ class ArticleComments extends Component {
     this.setState({ comments: filteredComments, isLoading: false });
   };
 
+  toggleShowContent = () => {
+    this.setState(currentState => {
+      return { showComments: !currentState.showComments };
+    });
+  };
+
   render() {
-    const { isLoading, comments, err } = this.state;
+    const { isLoading, comments, err, showComments } = this.state;
     const { article_id, username } = this.props;
     if (isLoading) return <Loading />;
     if (err) return <ErrorDisplay err={err} />;
@@ -60,18 +67,26 @@ class ArticleComments extends Component {
         />
 
         <h4>Previous comments...</h4>
-        <ul>
-          {comments.map(comment => {
-            return (
-              <CommentCard
-                key={comment.comment_id}
-                comment={comment}
-                handleDelete={this.handleDelete}
-                username={username}
-              />
-            );
-          })}
-        </ul>
+
+        <button className='toggleButton' onClick={this.toggleShowContent}>
+          {showComments ? "Hide" : "Show"}
+        </button>
+        {showComments && (
+          <ul>
+            {comments.map(comment => {
+              return (
+                <CommentCard
+                  key={comment.comment_id}
+                  comment={comment}
+                  handleDelete={this.handleDelete}
+                  username={username}
+                />
+              );
+            })}
+          </ul>
+        )}
+
+       
       </div>
     );
   }
